@@ -7539,7 +7539,7 @@ The purpose of this project is to explore whether Google Trends can serve as an 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [253]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [277]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Imports</span>
@@ -7583,9 +7583,9 @@ The purpose of this project is to explore whether Google Trends can serve as an 
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Data-Collection-">Data Collection <a class="anchor" id="data-collection"></a><a class="anchor-link" href="#Data-Collection-">¶</a></h1><hr/>
-The first piece of data we will collection comes from download the data from
+The first piece of data we will collect comes from downloading the data from
 Google Trends using this <a href="https://trends.google.com/trends/explore?date=now%201-d&amp;geo=US&amp;q=%2Fm%2F05p0rrx&amp;hl=en">link</a>.<br/>
-For the sake of this tutorial, we will be look at the Google Trend values from the weeks of 04/30/2023-04/28/2024, about a year in total.
+For the sake of this tutorial, we will be looking at the Google Trend values from the weeks of 04/30/2023-04/28/2024, about a year in total.
 <br/>
 <br/>
 To begin, we'll open the file using pandas' <i>read_csv</i> function, and rename the "Week" and "Bitcoin: (United States)" columns to "Date" and Google_Trend_Value", respectively. <br/>
@@ -7600,7 +7600,7 @@ Let's see the first 5 rows so far using the <i>head</i> function.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [254]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [278]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Opening Google Trends Bitcoin data</span>
@@ -7620,7 +7620,7 @@ Let's see the first 5 rows so far using the <i>head</i> function.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[254]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[278]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7683,9 +7683,9 @@ Let's see the first 5 rows so far using the <i>head</i> function.
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <hr/><div align="center"><img alt="yahoo logo" src="yahlogo.png"/></div><br/>
-Nice! Now that we have our Google Trend values, let's now using some webscraping to collection the corresponding Bitcoin (BTC) <br/>
+Nice! Now that we have our Google Trend values, let's now use some webscraping to collect the corresponding Bitcoin (BTC) <br/>
 prices for that time period. To do this, we'll get our data from Yahoo! Finance using this <a href="https://finance.yahoo.com/quote/BTC-USD/history/?period1=1682812800&amp;period2=1714262400">link</a>. We'll use our <i>Selenium</i> imports to get the page's source <br/>
-and have <i>BeautifulSoup</i> parse the ugly html for us.
+and have <i>BeautifulSoup</i> parse the ugly HTML for us.
 
 </div>
 </div>
@@ -7695,7 +7695,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [255]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [279]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Getting the relevant Bitcoin prices from Yahoo Finance.</span>
@@ -7721,7 +7721,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Using some more <i>BeautifulSoup</i> we'll find the table that hold the BTC data and do some string conversions to allow pandas to parse the<br/>BTC data into a nice data frame for us. Similarly to we we did before, we'll rename the columns into names more suitable for us.</p>
+<p>Using some more <i>BeautifulSoup</i>, we'll find the table that holds the relevant BTC data and do some string conversions to allow pandas to parse the<br/>BTC data into a nice data frame for us. Similarly to we we did before, we'll rename the columns into names more suitable for us.</p>
 </div>
 </div>
 </div>
@@ -7730,7 +7730,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [256]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [280]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">btc_table</span> <span class="o">=</span> <span class="n">bs</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'table'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'table svelte-ewueuo'</span><span class="p">)</span>
@@ -7750,7 +7750,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[256]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[280]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7844,7 +7844,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>One last thing for us to do is turn the daily data we got from Yahoo into weekly averages to match with the Google Trends values we have.<br/>Luckily, pandas again provides with two useful functions, <i>resample</i> and <i>mean</i> to do a lot of the heavy lifting for us.<br/>Like we did before as well, we need to first make the "Date" column into <i>datetime</i> objects and make it the data frame's index.</p>
+<p>One last thing for us to do is turn the daily data we got from Yahoo into weekly averages to match with the Google Trends values we have.<br/>Luckily, pandas again provides us with two useful functions, <i>resample</i> and <i>mean</i>, to do a lot of the heavy lifting for us.<br/>Like we did before as well, we need to first make the "Date" column into <i>datetime</i> objects and make it the data frame's index.</p>
 </div>
 </div>
 </div>
@@ -7853,7 +7853,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [257]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [281]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Since the dates in google trends are weekly, let's get the weekly avg for the dates here</span>
@@ -7871,7 +7871,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[257]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[281]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -7977,7 +7977,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [258]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [282]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">btc_weekly_averages</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">bitcoin_df</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">'Date'</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">'Date'</span><span class="p">)</span>
@@ -7992,7 +7992,7 @@ and have <i>BeautifulSoup</i> parse the ugly html for us.
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[258]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[282]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8107,7 +8107,7 @@ Now that we have our final data frame, let's start doing some EDA on it to see w
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [259]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [283]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -8147,7 +8147,7 @@ memory usage: 3.3 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [260]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [284]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -8161,7 +8161,7 @@ memory usage: 3.3 KB
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[260]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[284]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
@@ -8294,7 +8294,7 @@ memory usage: 3.3 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [261]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [285]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Plotting open, high, low, and close prices</span>
@@ -8338,7 +8338,7 @@ memory usage: 3.3 KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>For both the Volume and Google Trend Value columns, we'll plot bar graphs to see the volatility over time.</p>
+<p>For both the Volume and Google Trend Value columns, we'll plot bar graphs to see these changes over time.</p>
 </div>
 </div>
 </div>
@@ -8347,7 +8347,7 @@ memory usage: 3.3 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [262]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [286]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Volume Analysis</span>
@@ -8379,7 +8379,7 @@ memory usage: 3.3 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [263]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [287]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Google Trend Value Analysis</span>
@@ -8413,7 +8413,7 @@ memory usage: 3.3 KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The code below conducts a volatility analysis by first calculating the daily percentage change in closing prices, which we'll call "Daily Returns". These returns are then used to compute the rolling standard deviation over a 21-day window, representing the BTC's volatility, which is stored in a column called 'Volatility'. Finally, we'll visualize the volatility using a line graph, allowing for easy identification of periods with high or low price fluctuations. This analysis is crucial for investors and financial analysts as it helps assess risk, inform investment strategies, and understand market sentiment, highlighting how sensitive an asset is to changes in market conditions over a specified timeframe.</p>
+<p>The code below conducts a volatility analysis by first calculating the percentage change in closing prices, which we'll call "Weekly Returns". These returns are then used to compute the rolling standard deviation over a 21-day window, representing the BTC's volatility, which is stored in a column called 'Volatility'. Finally, we'll visualize the volatility using a line graph, allowing for easy identification of periods with high or low price fluctuations. This analysis is crucial for investors and financial analysts as it helps assess risk, inform investment strategies, and understand market sentiment, highlighting how sensitive an asset is to changes in market conditions over a specified timeframe.</p>
 </div>
 </div>
 </div>
@@ -8422,16 +8422,16 @@ memory usage: 3.3 KB
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [264]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [288]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Volatility Analysis</span>
 <span class="c1"># Calculate daily returns</span>
 <span class="n">temp_df</span> <span class="o">=</span> <span class="n">df</span>
-<span class="n">temp_df</span><span class="p">[</span><span class="s1">'Daily Returns'</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
+<span class="n">temp_df</span><span class="p">[</span><span class="s1">'Weekly_Returns'</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_df</span><span class="p">[</span><span class="s1">'Close'</span><span class="p">]</span><span class="o">.</span><span class="n">pct_change</span><span class="p">()</span>
 
-<span class="c1"># Calculate the rolling standard deviation of daily returns (volatility)</span>
-<span class="n">temp_df</span><span class="p">[</span><span class="s1">'Volatility'</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_df</span><span class="p">[</span><span class="s1">'Daily Returns'</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="c1"># Calculate the rolling standard deviation of weekly returns (volatility)</span>
+<span class="n">temp_df</span><span class="p">[</span><span class="s1">'Volatility'</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp_df</span><span class="p">[</span><span class="s1">'Weekly_Returns'</span><span class="p">]</span><span class="o">.</span><span class="n">rolling</span><span class="p">(</span><span class="n">window</span><span class="o">=</span><span class="mi">21</span><span class="p">)</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
 
 <span class="c1"># Plot the volatility</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
@@ -8465,7 +8465,7 @@ memory usage: 3.3 KB
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>To aid even further on our conquest to see how Google Trend value (GTV) can serve as an indicator for BTC's prices and Volume,
+<p>To aid even further on our conquest to see how Google Trend values (GTV) can serve as an indicator for BTC's prices and Volume,
 <br/>let's add an overlay to get a quick visual on how the GTV might correlate with both price and volume. This can help us<br/>
 spot trends such as increased or decreased prices and volume based on the GTV score.</p>
 </div>
@@ -8476,7 +8476,7 @@ spot trends such as increased or decreased prices and volume based on the GTV sc
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [265]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [289]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Overlaying GTV on close prices.</span>
@@ -8526,7 +8526,7 @@ spot trends such as increased or decreased prices and volume based on the GTV sc
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [266]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [290]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Create a figure and an axis object</span>
@@ -8577,9 +8577,9 @@ spot trends such as increased or decreased prices and volume based on the GTV sc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As we can see, the lines seem to follow the bar graphs as it moves up and down based on the GTV, so we may be onto something!</p>
+<p>As we can see, the lines seem to follow the bars as they move up and down based on the GTV, so we may be onto something!</p>
 <hr/>
-Let's now create scatterplots too see how google trends values affect these attributes.
+Let's now create scatterplots to see how google trends values affect these attributes.
 
 </div>
 </div>
@@ -8589,7 +8589,7 @@ Let's now create scatterplots too see how google trends values affect these attr
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [267]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [291]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Setting up a 2-by-2 subplot.</span>
@@ -8671,7 +8671,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on BTC "Close" pric
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [268]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [292]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span>
@@ -8687,7 +8687,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on BTC "Close" pric
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[268]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[292]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
@@ -8704,7 +8704,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on BTC "Close" pric
 <th>Date:</th> <td>Mon, 06 May 2024</td> <th>  Prob (F-statistic):</th> <td>5.36e-12</td>
 </tr>
 <tr>
-<th>Time:</th> <td>14:39:38</td> <th>  Log-Likelihood:    </th> <td> -556.91</td>
+<th>Time:</th> <td>15:27:26</td> <th>  Log-Likelihood:    </th> <td> -556.91</td>
 </tr>
 <tr>
 <th>No. Observations:</th> <td>    53</td> <th>  AIC:               </th> <td>   1118.</td>
@@ -8755,7 +8755,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on BTC "Close" pric
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As we can see from the OLS Regression results, the outputs of P&gt;|t| for both the <strong>Intercept</strong> and the <strong>GTV Coeffcients</strong><br/>are both under our chosen significance value, meaning these results are statistically significant.<br/>This allows use to confidently reject of null hypothesis and determine that the GTV <i>does</i> have a significant effect on BTC "Close" prices.</p>
+<hr/>As we can see from the OLS Regression results, the outputs of P&gt;|t| for both the <strong>Intercept</strong> and the <strong>GTV Coeffcient</strong><br/>are both lower than our chosen significance value, meaning these results are statistically significant.<br/>This allows use to confidently reject of null hypothesis and determine that the GTV <i>does</i> have a significant effect on BTC "Close" prices.
 <hr/>
 Now we'll conduct the same analysis for BTC's trade volume:<br/>
 H<sub>0</sub>: Google Trend Values have no effect on Bitcoin's trade volume.<br/>
@@ -8769,7 +8769,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on Bitcoin's trade 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [269]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [293]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">result_volume</span> <span class="o">=</span> <span class="n">statsmodels</span><span class="o">.</span><span class="n">formula</span><span class="o">.</span><span class="n">api</span><span class="o">.</span><span class="n">ols</span><span class="p">(</span><span class="n">formula</span><span class="o">=</span><span class="s2">"Volume ~ Google_Trend_Value"</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
@@ -8784,7 +8784,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on Bitcoin's trade 
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[269]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[293]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <table class="simpletable">
 <caption>OLS Regression Results</caption>
@@ -8801,7 +8801,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on Bitcoin's trade 
 <th>Date:</th> <td>Mon, 06 May 2024</td> <th>  Prob (F-statistic):</th> <td>1.61e-13</td>
 </tr>
 <tr>
-<th>Time:</th> <td>14:39:38</td> <th>  Log-Likelihood:    </th> <td> -1274.6</td>
+<th>Time:</th> <td>15:27:27</td> <th>  Log-Likelihood:    </th> <td> -1274.6</td>
 </tr>
 <tr>
 <th>No. Observations:</th> <td>    53</td> <th>  AIC:               </th> <td>   2553.</td>
@@ -8866,7 +8866,7 @@ H<sub>a</sub>: Google Trend Values have a significant effect on Bitcoin's trade 
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Machine-Learning-">Machine Learning <a class="anchor" id="ml"></a><a class="anchor-link" href="#Machine-Learning-">¶</a></h1><br/>
 Now that we've successfully concluded our hypothesis testing, we can move on to doing some machine learning!<br/>
-For this tutorial we'll use Linear Regression and the Random Forest Regressor for our anaylsis. For determining how well our models do, we'll<br/>see how their MSEs and R<sup>2</sup> values turnout. For reference, MSE is a metric that measures the average of the squares <br/>of the errors, specifically the difference between the original values and the predicted values, <br/>providing a clear indicator of the model's prediction accuracy where lower values indicate better performance.<br/>R<sup>2</sup> quantifies the percentage of the variance in the dependent variable that is predictable from the independent variables, offering an insight into the goodness of fit of the model, where a higher R<sup>2</sup> value closer to 1 suggests a better model fit.<br/> Let's start with Linear Regression:
+For this tutorial we'll use Linear Regression and the Random Forest Regressor for our anaylsis. For determining how well our models do, we'llsee how their Mean Squared Error (MSE) and R<sup>2</sup> values turnout.<br/><br/>For reference, MSE is a metric that measures the average of the squares of the errors, specifically the difference between the original values and the predicted values, <br/>providing a clear indicator of the model's prediction accuracy where lower values indicate better performance.<br/>R<sup>2</sup> quantifies the percentage of the variance in the dependent variable that is predictable from the independent variables, offering an insight into the goodness of fit of the model, where a higher R<sup>2</sup> value closer to 1 suggests a better model fit.<br/> Let's start with Linear Regression:
 
 </div>
 </div>
@@ -8876,7 +8876,7 @@ For this tutorial we'll use Linear Regression and the Random Forest Regressor fo
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [270]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [294]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Let's start with GVT vs. Close price using LR.</span>
@@ -8886,8 +8886,6 @@ For this tutorial we'll use Linear Regression and the Random Forest Regressor fo
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="c1"># Splitting the dataset into training and testing sets</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="c1">#scaled_X_train = scaler.fit_transform(X_train)</span>
-<span class="c1">#scaled_X_test = scaler.transform(X_test)</span>
 <span class="c1"># Create a Linear Regression model</span>
 <span class="n">close_lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 
@@ -8926,7 +8924,7 @@ R^2 Score: 0.7642127953571289
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [271]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [295]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Now for GVT vs. Close price using RFR</span>
@@ -8981,7 +8979,7 @@ Just by looking at the MSE and R<sup>2</sup> values from each model, it's clear 
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [272]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [296]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Visualising </span>
@@ -9030,7 +9028,7 @@ Now we'll create these models for BTC's trading volume.
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [273]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [297]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Now let's see GVT vs. Volume LR</span>
@@ -9039,8 +9037,6 @@ Now we'll create these models for BTC's trading volume.
 
 <span class="c1"># Splitting the dataset into training and testing sets</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="c1"># scaled_X_train = scaler.fit_transform(X_train)</span>
-<span class="c1"># scaled_X_test = scaler.transform(X_test)</span>
 <span class="c1"># Create a Linear Regression model</span>
 <span class="n">volume_lr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span>
 
@@ -9079,7 +9075,7 @@ R^2 Score: 0.5293799746418668
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [274]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [298]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Now for GVT vs. Volume using RFR</span>
@@ -9133,7 +9129,7 @@ Let's again perform the same visualization on a graph for the predicted and actu
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [275]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [299]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Visualising </span>
